@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		26E33EAF2D80BBAB00E555D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 26E33EAE2D80BBAB00E555D4 /* SnapKit */; };
+		26E33EB12D80BBAB00E555D4 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 26E33EB02D80BBAB00E555D4 /* SnapKit-Dynamic */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		26E33E402D80A7F600E555D4 /* CryptoWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E33EAF2D80BBAB00E555D4 /* SnapKit in Frameworks */,
+				26E33EB12D80BBAB00E555D4 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,8 @@
 			);
 			name = CryptoWallet;
 			packageProductDependencies = (
+				26E33EAE2D80BBAB00E555D4 /* SnapKit */,
+				26E33EB02D80BBAB00E555D4 /* SnapKit-Dynamic */,
 			);
 			productName = CryptoWallet;
 			productReference = 26E33E402D80A7F600E555D4 /* CryptoWallet.app */;
@@ -107,6 +116,9 @@
 			);
 			mainGroup = 26E33E372D80A7F600E555D4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				26E33EAD2D80BBAB00E555D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 26E33E412D80A7F600E555D4 /* Products */;
 			projectDirPath = "";
@@ -335,6 +347,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26E33EAD2D80BBAB00E555D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26E33EAE2D80BBAB00E555D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26E33EAD2D80BBAB00E555D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		26E33EB02D80BBAB00E555D4 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26E33EAD2D80BBAB00E555D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26E33E382D80A7F600E555D4 /* Project object */;
 }
