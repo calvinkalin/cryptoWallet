@@ -36,6 +36,7 @@ class HomeViewController: UIViewController {
     private func setupBindings() {
         viewModel.didChangeLoadingState = { [weak self] isLoading in
             DispatchQueue.main.async {
+                print("Loading state changed: \(isLoading)")
                 if isLoading {
                     self?.loadingIndicator.startAnimating()
                     self?.tableView.isHidden = true
@@ -48,6 +49,7 @@ class HomeViewController: UIViewController {
         
         viewModel.didUpdateData = { [weak self] in
             DispatchQueue.main.async {
+                print("Data updated, reloading table...")
                 self?.tableView.reloadData()
             }
         }
@@ -238,6 +240,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // переход
+        let selectedCoin = viewModel.currencies[indexPath.row]
+        let detailsVC = CoinDetailsViewController(viewModel: CoinDetailsViewModel(coin: selectedCoin))
+        navigationController?.pushViewController(detailsVC, animated: true)
     }
 }

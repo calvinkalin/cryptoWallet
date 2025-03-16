@@ -46,6 +46,7 @@ final class CurrencyViewModel: CurrencyViewModelProtocol {
             switch result {
             case .success(let currencies):
                 self?.currencies = currencies
+                print("Currencies fetched: \(currencies.count)")
             case .failure(let error):
                 print("Error: \(error.localizedDescription)")
             }
