@@ -13,4 +13,6 @@ struct Currency {
     let price: Double
     let changePercent: Double
     let logoName: String
+//    let circulatingSupply: Double
+//    let marketCap: Double
 }
