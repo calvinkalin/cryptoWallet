@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     private let usernameTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Username"
+        textField.font = .poppinsRegular(size: 15)
         textField.borderStyle = .none
         textField.backgroundColor = .white
         textField.layer.cornerRadius = 25
@@ -32,6 +33,7 @@ class LoginViewController: UIViewController {
     private let passwordTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Password"
+        textField.font = .poppinsRegular(size: 15)
         textField.borderStyle = .none
         textField.isSecureTextEntry = true
         textField.backgroundColor = .white
@@ -47,7 +49,7 @@ class LoginViewController: UIViewController {
         button.backgroundColor = .black
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 25
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.titleLabel?.font = .poppinsBold(size: 15)
         button.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         return button
     }()
