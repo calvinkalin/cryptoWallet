@@ -11,7 +11,7 @@ class TabBarFactory {
     static func createTabBarController() -> UITabBarController {
         let tabBarController = UITabBarController()
         
-        let homeVC = UINavigationController(rootViewController: HomeViewController())
+        let homeVC = UINavigationController(rootViewController: HomeViewController(viewModel: CurrencyViewModel()))
         homeVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "home"), tag: 0)
         
         let graphVC = UINavigationController(rootViewController: GraphViewController())
@@ -27,6 +27,10 @@ class TabBarFactory {
         profileVC.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "profile"), tag: 4)
         
         tabBarController.viewControllers = [homeVC, graphVC, walletVC, noteVC, profileVC]
+        
+        tabBarController.tabBar.backgroundColor = .white
+        tabBarController.tabBar.isTranslucent = false
+        
         return tabBarController
     }
 }
